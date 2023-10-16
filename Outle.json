@@ -1,0 +1,308 @@
+use('Outle');
+
+// Insertar Datos en Camisas
+// const colores = ["rojo", "verde", "azul", "amarillo", "rosa", "morado", "naranja", "gris"];
+// const tallasCamisas = ["S", "M", "L", "XL", "XXL"];
+// const marcasCamisas = ["Nike", "Adidas", "Polo Ralph Lauren", "H&M", "Zara", "Calvin Klein", "Tommy Hilfiger", "Gap"];
+
+// const tiposCamisas = ["Camisa de vestir", "Camiseta", "Camisa de manga larga", "Camisa de manga corta", "Camisa polo", "Camisa a cuadros", "Camisa de denim", "Camisa de franela"];
+
+// const caracteristicasOriginales =["Cuero", "Bolsillos", "Exportada", "Estampada"]
+// const camisas = new Array(500).fill(null).map((_, i) => {
+
+//     const Caracteristicas = [...caracteristicasOriginales].sort( () => .5 - Math.random() ).slice(2);
+
+//     return {
+//         Color: colores[Math.floor(Math.random()*colores.length)],
+//         Tallaje: tallasCamisas[Math.floor(Math.random()*tallasCamisas.length)],
+//         Marca: marcasCamisas[Math.floor(Math.random()*marcasCamisas.length)],
+//         Tipo: tiposCamisas[Math.floor(Math.random()*tiposCamisas.length)],
+//         Caracteristicas
+//     }
+// });
+
+// db.getCollection("Camisas").insertMany(camisas)
+
+//Insert One
+
+// db.getCollection('Camisas').insertOne([
+//     {'Color': 'gris', 'Tallaje': 'L', 'Marca':'Zara', 'Tipo': 'Camiseta', 'Caracteristicas': ["Bolsillos", "Exportada"]}
+// ])
+
+//Insertar Datos en Hoodies
+// const colores = ["rojo", "verde", "azul", "amarillo", "rosa", "morado", "naranja", "gris"];
+// const tallasHoodies = ["S", "M", "L", "XL", "XXL"];
+// const marcasHoodies = ["Nike", "Adidas", "Polo Ralph Lauren", "H&M", "Zara", "Calvin Klein", "Tommy Hilfiger", "Gap"];
+
+// const tiposHoodies = ["Con cierre y chompa", "Sin cierre y sin chompa"];
+
+// const caracteristicasOriginales =["Estampado", "Bolsillos", "Exportado", "Algodon"];
+// const lavable = [true , false];
+// const hoodies = new Array(500).fill(null).map((_, i) => {
+
+//     const Caracteristicas = [...caracteristicasOriginales].sort( () => .5 - Math.random() ).slice(2);
+
+//     return {
+//         Color: colores[Math.floor(Math.random()*colores.length)],
+//         Lavable: lavable[Math.floor(Math.random()*lavable.length)],
+//         Tallaje: tallasHoodies[Math.floor(Math.random()*tallasHoodies.length)],
+//         Marca: marcasHoodies[Math.floor(Math.random()*marcasHoodies.length)],
+//         Tipo: tiposHoodies[Math.floor(Math.random()*tiposHoodies.length)],
+//         Caracteristicas
+//     }
+// });
+
+// db.getCollection("Hoodies").insertMany(hoodies)
+
+//Insert One
+
+// db.getCollection('Hoodies').insertOne([
+//     {'Color': 'azul', 'Lavable': false, 'Tallaje': 'XXL', 'Marca':'Adidas', 'Tipo': 'Con cierre y chompa', 'Caracteristicas': ["Algodon", "Exportado"]}
+// ])
+
+//Insertar datos en Pantalones
+// const colores = ["rojo", "verde", "azul", "amarillo", "rosa", "morado", "naranja", "gris"];
+// const tallasPantalones = ["S", "M", "L", "XL", "XXL"];
+// const marcasPantalones = ["Nike", "Adidas", "Polo Ralph Lauren", "H&M", "Zara", "Calvin Klein", "Tommy Hilfiger", "Gap"];
+
+// const tiposPantalones = ["Jean", "Cargo", "Jogger"];
+
+// const caracteristicasOriginales =["Estampado", "Bolsillos", "Exportado", "Bota Ancha"];
+// const lavable = [true , false];
+// const pantalones = new Array(500).fill(null).map((_, i) => {
+
+//     const Caracteristicas = [...caracteristicasOriginales].sort( () => .5 - Math.random() ).slice(2);
+
+//     return {
+//         Color: colores[Math.floor(Math.random()*colores.length)],
+//         Lavable: lavable[Math.floor(Math.random()*lavable.length)],
+//         Tallaje: tallasPantalones[Math.floor(Math.random()*tallasPantalones.length)],
+//         Marca: marcasPantalones[Math.floor(Math.random()*marcasPantalones.length)],
+//         Tipo: tiposPantalones[Math.floor(Math.random()*tiposPantalones.length)],
+//         Caracteristicas
+//     }
+// });
+
+// db.getCollection("Pantalones").insertMany(pantalones)
+
+//Insert One
+// db.getCollection('Pantalones').insertOne([
+//         {'Color': 'rojo', 'Lavable': false, 'Tallaje': 'XXL', 'Marca':'Nike', 'Tipo': 'Cargo', 'Caracteristicas': ["Bolsillos", "Estampado"]}
+//     ])
+
+
+//Find Camisas
+// db.getCollection('Camisas').find()
+
+//Find One Camisas
+// db.getCollection('Camisas').findOne({Color: 'rojo'})
+
+//Update One Camisas
+// db.getCollection('Camisas').updateOne({Color: 'morado'},{$set:{Tallaje:'S'}})
+
+//Update Many Camisas
+// db.getCollection('Camisas').updateMany({Meses: 4},{$set:{Meses: Math.floor(Math.random() * (16 - 2 + 1) + 2) }})
+
+//Delete One Camisas
+// db.getCollection('Camisas').deleteOne({Color: 'gris'})
+
+//Delete Many Camisas
+// db.getCollection('Camisas').deleteMany({Color: 'morado'})
+
+
+//Find Hoodies
+// db.getCollection('Hoodies').find()
+
+//Find One Hoodies
+// db.getCollection('Hoodies').findOne({Lavable: true})
+
+//Update One Hoodies
+// db.getCollection('Hoodies').updateOne({Color: 'rojo'},{$set:{Tallaje:'XXL'}})
+
+//Update Many Hoodies
+// db.getCollection('Hoodies').updateMany({Color: 'verde'},{$set:{Color: 'café'}})
+
+//Delete One Hoodies
+// db.getCollection('Hoodies').deleteOne({Color: 'azul'})
+
+//Delete Many Hoodies
+// db.getCollection('Hoodies').deleteMany({Color: 'café'})
+
+
+//Find Pantalones
+// db.getCollection('Pantalones').find()
+
+//Find One Pantalones
+// db.getCollection('Pantalones').findOne({Tipo: 'Jogger'})
+
+//Update One Pantalones
+// db.getCollection('Pantalones').updateOne({Marca: 'Zara'},{$set:{Lavable:false}})
+
+//Update Many Pantalones
+// db.getCollection('Pantalones').updateMany({Tallaje: 'M'},{$set:{Tipo: 'Jean'}})
+
+//Delete One Pantalones
+// db.getCollection('Pantalones').deleteOne({Marca: 'Nike'})
+
+//Delete Many Pantalones
+// db.getCollection('Pantalones').deleteMany({Lavable: false})
+
+
+//Operadores Relacionales
+
+//$eq
+// db.getCollection('Camisas').find({Meses:{$eq:23}});
+// db.getCollection('Hoodies').find({Meses:{$eq:2}});
+// db.getCollection('Pantalones').find({Meses:{$eq:17}});
+
+//$lt
+// db.getCollection('Camisas').find({Meses:{$lt:28}});
+// db.getCollection('Hoodies').find({Meses:{$lt:3}});
+// db.getCollection('Pantalones').find({Meses:{$lt:11}});
+
+//$gt
+// db.getCollection('Camisas').find({Meses:{$gt:28}});
+// db.getCollection('Hoodies').find({Meses:{$gt:15}});
+// db.getCollection('Pantalones').find({Meses:{$gt:8}});
+
+//$gte
+// db.getCollection('Camisas').find({Meses:{$gte:1}});
+// db.getCollection('Hoodies').find({Meses:{$gte:19}});
+// db.getCollection('Pantalones').find({Meses:{$gte:7}});
+
+//$ne
+// db.getCollection('Camisas').find({Color:{$ne:'rojo'}});
+// db.getCollection('Hoodies').find({Marca:{$ne:'Calvin Klein'}});
+// db.getCollection('Pantalones').find({Tipo:{$ne:'Jean'}});
+
+//$in
+// db.getCollection('Camisas').find({Tallaje:{$in:['XL']}});
+// db.getCollection('Hoodies').find({Caracteristicas:{$in:['Exportado']}});
+// db.getCollection('Pantalones').find({Tipo:{$in:['Jean', 'Cargo']}});
+
+//$nin
+// db.getCollection('Camisas').find({Marca:{$nin:['Nike', 'Gap']}});
+// db.getCollection('Hoodies').find({Tipo:{$nin:['Sin cierre y sin chompa']}});
+// db.getCollection('Pantalones').find({Meses:{$nin:[1,2,3,4,5,6,7,8,9,10]}});
+
+//Operadores Lógicos
+
+//$and
+// db.getCollection('Camisas').find({$and: [{Color:'rojo'},{Tallaje:'XXL'}] });
+// db.getCollection('Hoodies').find({$and: [{Marca:'Nike'},{Caracteristicas:['Bolsillos', 'Exportado']}] });
+// db.getCollection('Pantalones').find({$and: [{Meses: 17},{Tipo:'Jean'}] });
+
+//$or
+// db.getCollection('Camisas').find({$or: [{Marca:'Nike'},{Marca:'Zara'}] });
+// db.getCollection('Hoodies').find({$or: [{Meses:15},{Tallaje:'S'}] });
+// db.getCollection('Pantalones').find({$or: [{Tipo:'Jean'},{Lavable:true}] });
+
+//$not $eq
+// db.getCollection('Camisas').find({Tipo:{$not: {$eq:'Camisa de denim'} }})
+// db.getCollection('Hoodies').find({Marca:{$not: {$eq:'Calvin Klein'} }});
+// db.getCollection('Pantalones').find({Meses:{$not: {$eq:10} }});
+
+//Operadores de Evaluación
+
+//Index
+// db.getCollection('Camisas').createIndex( { Marca: 'text' } )
+// db.getCollection('Camisas').find( { $text: { $search: 'Nike' } } );
+
+//$regex
+// db.getCollection('Camisas').find( { Tallaje: { $regex: /XL/ }} );
+// db.getCollection('Hoodies').find( { Marca: { $regex: /Klei/ }} );
+// db.getCollection('Pantalones').find( { Color: { $regex: /rojo/ }} );
+
+//$where
+// db.getCollection('Camisas').find( { $where: function() {
+//     return (hex_md5(this.Marca) == "965b11a46418878a13732a04b3db07b3" )
+//  } } );
+
+// db.getCollection('Hoodies').find( { $where: function() {
+//     return (hex_md5(this.Marca) == "4db6adde7999319bfb67bee86942f8e9")
+//  } } );
+
+// db.getCollection('Pantalones').find( { $where: function() {
+//     return (hex_md5(this.Color) == "3b24fa7e14555a1912e5bc2198f8e075")
+//  } } );
+
+//Operadores de elementos
+
+//$exists
+// db.getCollection('Camisas').find( { Color: { $exists: true } } );
+// db.getCollection('Hoodies').find( { Marca: { $exists: true } } );
+// db.getCollection('Pantalones').find( { Tipo: { $exists: true } } );
+
+//$type 
+// db.getCollection('Camisas').find( { "Color" : { $type : "string" } } );
+// db.getCollection('Hoodies').find( { "Marca" : { $type : "string" } } );
+// db.getCollection('Pantalones').find( { "Tipo" : { $type : "string" } } );
+
+//Operadores de array
+
+// db.getCollection('Camisas').find( ( { Caracteristicas: { $all: [ "Cuero", "Exportada" ] } } ));
+// db.getCollection('Hoodies').find( ( { Caracteristicas: { $all: [ "Estampado", "Exportado" ] } } ));
+// db.getCollection('Pantalones').find( ( { Caracteristicas: { $all: [ "Exportado", "Bolsillos" ] } } ));
+
+
+// db.getCollection('Camisas').find( {
+//     CaracteristicasGenerales: { $all: [
+//                    { "$elemMatch" : {Fabricacion: "A Mano"} }
+//                  ] }
+//   } )
+  
+
+// db.getCollection('Hoodies').find( {
+//     CaracteristicasGenerales: { $all: [
+//                    { "$elemMatch" : { Fabricacion: "Aguja" } },
+//                    { "$elemMatch" : { Origen:  "China" } }
+//                  ] }
+//   } );
+
+// db.getCollection('Pantalones').find( {
+//     CaracteristicasGenerales: { $all: [
+//                    { "$elemMatch" : { Origen: "Irán" } },
+//                  ] }
+//   } );
+
+//db.getCollection('Camisas').find( {Caracteristicas: { $size: 2} } );
+// db.getCollection('Camisas').find( {Unidades: 1, PedidosDiarios: { $gte: 85} },{"PedidosDiarios.$": 1});
+// db.getCollection('Hoodies').find( {Unidades: 87, PedidosDiarios: { $eq: 9} },{"PedidosDiarios.$": 1});
+// db.getCollection('Pantalones').find( {Unidades: 23, PedidosDiarios: { $lt: 70} },{"PedidosDiarios.$": 1});
+
+// db.getCollection('Camisas').find( {CaracteristicasGenerales:{$elemMatch :{ TiempoEnDias: 10}}});
+// db.getCollection('Hoodies').find( {CaracteristicasGenerales:{$elemMatch :{ Fabricacion: 'Aguja'}}});
+// db.getCollection('Camisas').find( {CaracteristicasGenerales:{$elemMatch :{ TiempoEnDias: 5}}});
+
+// db.getCollection('Camisas').find({}, {Caracteristicas: {$slice:1} });
+// db.getCollection('Hoodies').find({}, {Caracteristicas: {$slice:0} });
+// db.getCollection('Pantalones').find({}, {Caracteristicas: {$slice:2} });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
